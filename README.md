@@ -2,7 +2,9 @@
 
 This is a useful tool for decrypt or crypt the seazer algorithm.
 
-I hope this tool helps. 
+I hope this tool helps you. 
+
+If you want decrypt write the minus shift number else use plus number.
 
 Take it easy...
 
