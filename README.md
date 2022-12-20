@@ -1,6 +1,6 @@
-# Seazer_Cipher_Decrypt
+# Seazer_Cipher
 
-This is a useful tool for decrypt the seazer algorithm.
+This is a useful tool for decrypt or crypt the seazer algorithm.
 
 I hope this tool helps. 
 
