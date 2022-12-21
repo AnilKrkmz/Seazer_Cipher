@@ -30,13 +30,20 @@ print(logo)
 console1 = input("\033[96mEnter the text to decrypt: \033[0m")
 console2 = int(input("\033[91mEnter the crypt number: \033[0m"))
 
-def ceaser_decrypt(text, number):
-  final_result = ""
-  for c in text:
-    if c.isupper():
-      final_result += chr((ord(c) - number - 65) % 26 + 65)
-    else:
-      final_result += chr((ord(c) - number - 97) % 26 + 97)
-  return final_result
 
-print(ceaser_decrypt(console1,console2))
+def caesar_cipher(text, shift):
+    alphabet = ['a', 'b', 'c', 'ç', 'd', 'e', 'f', 'g', 'ğ', 'h', 'ı', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'ö', 'p', 'r', 's', 'ş', 't', 'u', 'ü', 'v', 'y', 'z']
+    encrypted_text = []
+    for char in text:
+        if char not in alphabet:
+            encrypted_text.append(char)
+            continue
+        idx = alphabet.index(char)
+        idx = (idx + shift) % len(alphabet)
+        encrypted_text.append(alphabet[idx])
+    return ''.join(encrypted_text)
+text = console1
+shift = console2
+
+print(caesar_cipher(text, shift))
+
